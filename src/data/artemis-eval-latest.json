@@ -1,0 +1,202 @@
+{
+  "generated_at": "20261026T135944Z",
+  "metrics": {
+    "total_cases": 6,
+    "task_success_rate": 0.8333333333333334,
+    "routing_accuracy": 1.0,
+    "tool_selection_accuracy": 0.8333333333333334,
+    "avg_step_count": 1.3333333333333333,
+    "avg_duration_s": 9.479166666666666,
+    "total_prompt_tokens": 14858,
+    "total_completion_tokens": 1228,
+    "total_tokens": 16086,
+    "total_cost_usd": 0.0029655,
+    "pricing_unavailable_count": 0,
+    "failure_breakdown": {
+      "tool_sequence_mismatch": 1
+    }
+  },
+  "results": [
+    {
+      "case_id": "suggest_ingest_docs_no_ingest",
+      "query": "What are the best options for ingesting the docs folder? Don't ingest, just suggest.",
+      "expected_agent": "ingestion",
+      "actual_agent": "ingestion",
+      "actual_tool_names": [
+        "suggest_ingest_options"
+      ],
+      "routing_correct": true,
+      "tool_sequence_correct": true,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": null,
+      "success": true,
+      "duration_s": 15.139999999999418,
+      "usage": {
+        "prompt_tokens": 3570,
+        "completion_tokens": 224,
+        "total_tokens": 3794,
+        "call_count": 4,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.0006699,
+      "model_name": "gpt-4o-mini"
+    },
+    {
+      "case_id": "suggest_settings_readme_no_ingest",
+      "query": "Suggest settings for ingesting README.md. I don't want to ingest yet.",
+      "expected_agent": "ingestion",
+      "actual_agent": "ingestion",
+      "actual_tool_names": [
+        "suggest_ingest_options"
+      ],
+      "routing_correct": true,
+      "tool_sequence_correct": true,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": null,
+      "success": true,
+      "duration_s": 10.297000000005937,
+      "usage": {
+        "prompt_tokens": 3528,
+        "completion_tokens": 224,
+        "total_tokens": 3752,
+        "call_count": 4,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.0006636,
+      "model_name": "gpt-4o-mini"
+    },
+    {
+      "case_id": "rag_options_query",
+      "query": "What search modes and chunk strategies are available?",
+      "expected_agent": "rag_search",
+      "actual_agent": "rag_search",
+      "actual_tool_names": [
+        "get_rag_options"
+      ],
+      "routing_correct": true,
+      "tool_sequence_correct": true,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": null,
+      "success": true,
+      "duration_s": 6.827999999994063,
+      "usage": {
+        "prompt_tokens": 1898,
+        "completion_tokens": 162,
+        "total_tokens": 2060,
+        "call_count": 4,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.00038189999999999996,
+      "model_name": "gpt-4o-mini"
+    },
+    {
+      "case_id": "search_system_docs_rag_chunking",
+      "query": "Search the knowledge base for how RAG chunking works.",
+      "expected_agent": "rag_search",
+      "actual_agent": "rag_search",
+      "actual_tool_names": [
+        "get_rag_options"
+      ],
+      "routing_correct": true,
+      "tool_sequence_correct": false,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": "tool_sequence_mismatch",
+      "success": false,
+      "duration_s": 8.843999999997322,
+      "usage": {
+        "prompt_tokens": 1910,
+        "completion_tokens": 292,
+        "total_tokens": 2202,
+        "call_count": 4,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.00046169999999999995,
+      "model_name": "gpt-4o-mini"
+    },
+    {
+      "case_id": "list_collections_query",
+      "query": "What collections exist in the knowledge base right now?",
+      "expected_agent": "collection_management",
+      "actual_agent": "collection_management",
+      "actual_tool_names": [
+        "list_collections",
+        "list_collections",
+        "list_collections",
+        "list_collections"
+      ],
+      "routing_correct": true,
+      "tool_sequence_correct": true,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": null,
+      "success": true,
+      "duration_s": 12.98399999999674,
+      "usage": {
+        "prompt_tokens": 3284,
+        "completion_tokens": 299,
+        "total_tokens": 3583,
+        "call_count": 6,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.0006719999999999999,
+      "model_name": "gpt-4o-mini"
+    },
+    {
+      "case_id": "direct_greeting_no_tools",
+      "query": "Hi, how are you?",
+      "expected_agent": "direct",
+      "actual_agent": "direct",
+      "actual_tool_names": [],
+      "routing_correct": true,
+      "tool_sequence_correct": true,
+      "forbidden_tool_used": null,
+      "error": null,
+      "failure_reason": null,
+      "success": true,
+      "duration_s": 2.7820000000065193,
+      "usage": {
+        "prompt_tokens": 668,
+        "completion_tokens": 27,
+        "total_tokens": 695,
+        "call_count": 2,
+        "models": [
+          "gpt-4o-mini",
+          "gpt-4o-mini"
+        ]
+      },
+      "cost_usd": 0.0001164,
+      "model_name": "gpt-4o-mini"
+    }
+  ]
+}

@@ -8,10 +8,40 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        bg: "#18191b",
+        surface: "#222427",
+        surface2: "#2a2c30",
+        ink: "#eff0f1",
+        muted: "#9c9ea3",
+        accent: "#ff4a1f",
+        accentInk: "#18191b",
+        field1: "#eff0f1",
+        field1Ink: "#18191b",
+        field1Muted: "#6b6d72",
+        field1Surface: "#e2e3e5",
+      },
+      fontFamily: {
+        sans: [
+          "Switzer",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+      fontSize: {
+        small: "var(--step-small)",
+        body: "var(--step-body)",
+        lead: "var(--step-lead)",
+        head: "var(--step-head)",
+      },
+      maxWidth: {
+        col: "560px",
+        colNarrow: "520px",
       },
     },
   },
